@@ -1,8 +1,11 @@
 package vishnu.android.pinlogin;
 
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import java.util.Arrays;
@@ -51,6 +54,11 @@ public class PinLoginActivity extends AppCompatActivity implements View.OnClickL
         }
         for (Button btn: btnOthersArray      ) {
             btn.setOnClickListener(this);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow(); // in Activity's onCreate() for instance
+            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
 
 
