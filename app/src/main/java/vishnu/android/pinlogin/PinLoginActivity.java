@@ -13,8 +13,7 @@ import java.util.Arrays;
 public class PinLoginActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnShwPassFirst,btnShwPassSecond, btnShwPassThird, btnShwPassFourth;
     private int counter = 0;
-    private Button[] btnArray ;
-    private Button[] btnOthersArray;
+    private Button[] btnArray, btnOthersArray ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,9 +122,7 @@ public class PinLoginActivity extends AppCompatActivity implements View.OnClickL
                             btnShwPassSecond.setBackgroundResource(R.drawable.empty_password);
                             btnShwPassThird.setBackgroundResource(R.drawable.empty_password);
                             btnShwPassFourth.setBackgroundResource(R.drawable.empty_password);
-
                     }
-
             }
         }
     }
